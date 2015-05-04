@@ -1,129 +1,78 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<title>PEW (NUSGDG)</title>
 		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="main_style.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 	</head>
+
+	<title>NUSGo![Beta]</title>
+
 	<body>
-		<br><br><br><br>
-		<div class = "content">
-			<br><br><br>
-			<div class = "container">
-				<div class = "row">
-					<div class = "col-sm-12">
-						<div class = "top">
-							<iframe class = "video" width="560" height="315" src="https://www.youtube.com/embed/FD_SbJCQovU?controls=0&showinfo=0&autoplay=1&loop=1" frameborder="0" allowfullscreen scrolling="no" allowTransparency="true"></iframe>
-							<div class = "header">
-								<div class = "container">
-									<div class = "row">
-										<div class = "col-sm-7">
-											<p class = "countdown"> 3... 2... 1...</p>
-											<img class = "title" src = "images/pew.png"></img>
-										</div>
-										<div class = "col-sm-5">
-											<div class = "quote1">
-												<h1>"<em>This game is </em>PEWty AWESOME! 11/10!"</h1>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class = "headerBtm">
-								<div class = "container">
-									<div class = "row">
-										<div class = "col-sm-6">
-											<p class = "freeQuote"> Play it for FREE!</p>
-										</div>
-										<div class = "col-sm-6">
-											<img class = "googleplay" src = "images/googleplay.png"></img>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class = "topRectangle"></div>
-						</div>
+		<div id = "promptBackground"></div>
+		<div class = "container-fluid">
+			<div class = "row" id = "navigation">
+				<div class = "col-md-10 col-sm-8">
+					<img id="siteTitle" src = "title.png"></img>
+					<div id = "searchBox">
+						<input id="pac-input" class="controls" type="text" placeholder="  Search places">
 					</div>
 				</div>
-				<br><br><br><br><br><br>
-				<div class = "quote2">
-					<h2>"DRAGON vs SPACESHIP... I always wonder who would win?
-						<br> FINALLY, the debate ENDS NOW!"</h2>
-					<p>- YOU when you were 5 years old</p>
+				<div class = "col-md-1 col-sm-2" id = "navBtn">
+					<div class = "navBtn" id = "notifications">Notifications</div> 
 				</div>
-				<br><br>
-				<div class = "row">
-					<div class = "col-sm-12">
-						<div class = "middle">
-								<div class = "middleStuff">
-									<img class = "art1" src = "images/art1.jpg"></img>
-									<p class = "whatIsPew"> What is PEW? </p><br>
-									<p> PEW is a PvP bullet hell game.
-										This game is about FAST REFLEX, PRECISION,
-										CONCENTRATION, EXPLOSIONS, FIREBALLS and
-										LASER BEAAAAAAMS!!!</p> <br>
-									<p class = "destroy"> Time to DESTROY your friend in a 1v1 PEW battle!</p>
-								</div>
-							<div class = "middleRectangle"></div>
-						</div>
-					</div>
+				<div class = "col-md-1 col-sm-2" id = "navBtn">
+					<div class = "navBtn" id = "about">About</div>
 				</div>
-				<br><br>
-				<div class = "quote2">
-					<h2>"PEW-ease play with me ONE MORE TIME!"</h2>
-					<p>- YOU after every round</p>
+			</div>
+			<div id = "notificationsBox">
+				<h1>Notifications</h1>
+			</div>
+			<div id = "prompt">
+				<h1 style = "text-align: center;">Indicate a meal preference</h1>
+				<form id = "form">
+					<input type = "radio" name = "meal" value = "breakfast">Breakfast<br>
+					<input type = "radio" name = "meal" value = "brunch">Brunch<br>
+					<input type = "radio" name = "meal" value = "lunch">Lunch<br>
+					<input type = "radio" name = "meal" value = "tea">Tea<br>
+					<input type = "radio" name = "meal" value = "dinner">Dinner<br>
+					<input type = "radio" name = "meal" value = "supper">Supper<br>
+					<input type = "text" name = "message"><br>
+					<div id = "submit"><b>RollingGO!</b></div>
+				</form>
+			</div>
+			<div class = "row">
+				<div class = "col-md-8">
+					<br>
+					<div id="googleMap"></div>
+					<br>
 				</div>
-				<br><br>
-				<div class = "row">
-					<div class = "col-sm-12">
-						<div class = "soundtrack">
-							<p class = "soundtrackTitle">Soundtracks</p><br>
-							<p class = "ost1"> Battle Theme </p>
-							<audio controls>
-								<source src = "audio/pew_main_v0.004.wav" type = "audio/wav">
-							</audio><br><br>
-							<p class = "ost2"> Menu Theme </p>
-							<audio controls>
-								<source src = "audio/pew_title_v0.001.wav" type = "audio/wav">
-							</audio><br><br>
-							<p class = "ost3"> Laser Beam </p>
-							<audio controls>
-								<source src = "audio/pew_charginlazer.wav" type = "audio/wav">
-							</audio>
-						</div>
-						<div class = "soundtrackRectangle"></div>
-					</div>
+				<br>
+				<br>
+				<div id="homeDescription" class = "col-md-4">
+					<h2>Looking for a meal buddy?</h2>
+					<h2>Wanna make new friends?</h2>
+					<br>
+					<p>Show that you are up for a meal by indicating your position on the map! (Annonymous)</p>
+					<p>Or you can click on a marker to join him/her for a meal! (Non-annonymous)</p>
+					<br>
+					<h2>Let's <b>RollingGO!</b></h2>
+					<h3 id = "markerCount">Number of people available: 0</h3>
 				</div>
-				<br><br>
-				<div class = "quote3">
-					<h2>"WOW NOW I CAN SHOOT LASER BEAMS! I approve this game!"</h2>
-					<p>-Dragon</p>
+				<p>NUSGo! is an application that helps you find meal buddies and make new friends. We bring your search for a meal buddy out of your usual social circle, to the whole school where adventurous and curious individuals look forward to forge new friendships.</p>
+				<p>Whom will your next click being you to? Let's NUSGo!</p>
+			</div>
+			<div id="endBar" class = "row">
+				<div class = "col-md-12">
+					<p>Created by KangSoon and Andhieka, 6th May 2015</p>
 				</div>
-				<br><br>
-				<div class = "row">
-					<div class = "col-sm-12">
-						<div class = "devTeam">
-							<p class = "teamTitle"> About NUS Games Development Group </p>
-							<img class = "nusgdglogo" src = "images/nusgdglogo.jpg"></img> <br>
-							<p class = "teamAbout"> We are a student initiated interest group in National University of Singapore.<br>And we make games. </p>
-							<p> Development team: </p>
-							<li> Tan Kang Soon (Designer/Producer/Artist) </li>
-							<li> Tan Yan Ling (Lead Artist) </li>
-							<li> Abdul Hadi (Lead programmer) </li>
-							<li> Du Wei (Programmer) </li>
-							<li> Muhammed Hanif Bin Ghazali (SFX/ Programmer)</li>
-						</div>
-						<div class = "devTeamRectangle"></div>
-					</div>
-				</div>
-				<br><br><br><br><br>
-				<p class = "time"> 2015-2016 NUS GDG </p>
 			</div>
 		</div>
-		
-		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-	    <script src = "http://www.netcu.de/templates/netcu/js/jquery.touchwipe.min.js"></script>
-    	<script src="app.js"></script>
 	</body>
+
+	<script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?libraries=geometry,places,drawing"></script>
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src = "app.js"></script>
+
 </html>
